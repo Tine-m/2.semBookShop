@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Register book</title>
+</head>
+<body>
+
+<form method="POST" th:action="@{/addToList}" th:object="${book}">
+    <input type="text" th:field="*{title}"
+           placeholder="Title">
+    <input type="text" th:field="*{year}"
+           placeholder="Year">
+    <input type="text" th:field="*{ebook}"
+           placeholder="Ebook">
+
+    <input type="submit" value="Submit book"/>
+</form>
+
+</body>
+</html>
